@@ -1,0 +1,26 @@
+.pb_table_div {
+    padding: 20px;
+}
+
+.pb_doctor_table {
+  
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pb_table_headers {
+    box-shadow: 0 5px 1px cornflowerblue;
+}
+
+.pb_doctor_table th, .pb_doctor_table td {
+    box-shadow: 0 5px 2px rgba(0,0,0,0.2);
+    border: 1px ;
+    padding: 8px;
+    text-align: center;
+}
+
+.pb_doctor_table th {
+    background-color: white;
+    color: black;
+    
+}

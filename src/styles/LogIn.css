@@ -1,0 +1,68 @@
+.log_body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.log_div {
+    display: flex;
+    height: 400px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    width: 500px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.log_h {
+    font-weight: bold;
+}
+
+.log_p {
+    opacity: 0.7;
+}
+
+.log_input_p {
+    text-align: left;
+    margin: 10px 20px 5px ;
+    font-weight: bold;
+    padding: 0px;
+    display: block;
+}
+
+.log_input {  
+    margin: 5px 20px 5px 20px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    display: block;
+    width: 90%;
+}
+
+.log_a_button {
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    color: white;
+    margin: 30px 20px 10px 20px;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    width: 90%;
+}
+
+.log_a_button:hover {
+    background-color: rgb(70, 70, 237); 
+}
+
+.log_link {
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}

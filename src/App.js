@@ -1,24 +1,55 @@
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import FirstPage from './components/FirstPage.js';
+import LogIn from './components/LogIn.js';
+import Register from './components/Register.js';
+
+import AdminDashboard from './components/AdminPages/AdminDashboard.js';
+import AdminDoctors from './components/AdminPages/AdminDoctors.js';
+import AdminPatients from './components/AdminPages/AdminPatients.js';
+import AdminAppointment from './components/AdminPages/AdminAppointment.js';
+import AdminSchedule from './components/AdminPages/AdminSchedule.js';
+
+import PatientDashboard from './components/PatientPages/PatientDashboard.js';
+import PatientAllDoctors from './components/PatientPages/PatientAllDoctors.js';
+import PatientSchedule from './components/PatientPages/PatientSchedule.js';
+import PatientMyBookings from './components/PatientPages/PatientMyBookings.js';
+
+import DoctorDashboard from './components/DoctorPages/DoctorDashboard.jsx';
+import DoctorsMyAppointments from './components/DoctorPages/DoctorsMyAppointments.jsx';
+import DoctorMySessions from './components/DoctorPages/DoctorMySessions.jsx';
+import DoctorMyPatients from './components/DoctorPages/DoctorMyPatients.jsx';
+
+
+
+
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<FirstPage />} />
+        <Route path="/login" element={<LogIn />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/admin-dashboard" element={<AdminDashboard />} />
+        <Route path="/admin_doctors" element={<AdminDoctors />} />
+        <Route path='/patient_dashboard' element={<PatientDashboard/>} />
+        <Route path='/doctor_dashboard' element={<DoctorDashboard/>} />
+        <Route path='/doctors_my_appointments' element={<DoctorsMyAppointments/>} />
+        <Route path='/admin_patients' element={<AdminPatients/>} />
+        <Route path='/admin_appointment' element={<AdminAppointment/>} />
+        <Route path='/admin_schedule' element={<AdminSchedule/>} />
+        <Route path='/doctors_my_sessions' element={<DoctorMySessions/>} />
+        <Route path='/doctors_my_patients' element={<DoctorMyPatients/>} />
+        <Route path='/patient_all_doctors' element={<PatientAllDoctors/>} />
+        <Route path='/patient_schedule' element={<PatientSchedule/>} />
+        <Route path='/patient_my_bookings' element={<PatientMyBookings/>} />
+
+      </Routes>
+    </Router>
   );
 }
 

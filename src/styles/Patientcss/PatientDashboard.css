@@ -1,0 +1,108 @@
+.phome_up_div {
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+    padding: 25px;
+}
+
+.phome_up_div::before {
+content: "";
+  position: absolute;
+  top: 5px; left: 5px; right: 5px; bottom: 5px;
+  background-image: url('../../images/images2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0.6;
+  z-index: -1;
+  width: 100%;
+  height: 250px;
+}
+
+.phome_down_div {
+  display: flex;              
+  justify-content: space-between;
+  gap: 50px;
+  padding: 20px 20px 30px;
+  padding-right: 70px;
+}
+
+
+
+.phome_status_div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  border-radius: 8px;
+  padding: 10px 0px 20px;
+  width: 100%;
+  height: 100px;
+  gap: 10px;
+}
+
+.phome_status_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  padding: 22px;
+  width: 250px;
+  height: 100px;
+  border: 1px solid #e0e0e0;
+  
+}
+
+.phome_status_block_icondiv {
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.phome_status_block_pnum {
+    font-size: 20px;
+    font-weight: 600;
+    color: cornflowerblue;
+    margin: 2px;
+}
+
+.phome_status_block_pname {
+    color: #555;
+}
+
+.phome_status_block_icon {
+    color: cornflowerblue;
+    padding: 10px; 
+    margin: auto;  
+}
+
+
+.phome_table_div {
+    padding: 20px;
+}
+
+.phome_doctor_table {
+  
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.phome_table_headers {
+    box-shadow: 0 5px 1px cornflowerblue;
+}
+
+.phome_doctor_table th, .phome_doctor_table td {
+    box-shadow: 0 5px 2px rgba(0,0,0,0.2);
+    border: 1px ;
+    padding: 8px;
+    text-align: center;
+}
+
+.phome_doctor_table th {
+    background-color: white;
+    color: black;
+    
+}

@@ -1,0 +1,76 @@
+.register_body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.register_div {
+    display: flex;
+    height: 600px;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: white;
+    width: 480px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.register_h {
+    font-weight: bold;
+}
+
+.register_p {
+    opacity: 0.7;
+}
+
+.register_input_p {
+    text-align: left;
+    margin: 10px 20px 5px ;
+    font-weight: bold;
+    padding: 0px;
+}
+
+.register_ns {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.register_input {
+    margin: 5px 20px 5px 20px;
+    padding: 5px;
+}
+
+.register_button_div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.register_button {
+    color: white;
+    background-color: cornflowerblue;
+    height: 40px;
+    width: 90%;
+    border-radius: 5%;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 20px 5px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+}
+
+.register_button:hover {
+    background-color: rgb(70, 70, 237);
+}
+
+.register_link {
+    margin-top: 10px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
