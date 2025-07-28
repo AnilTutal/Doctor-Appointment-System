@@ -1,3 +1,5 @@
+Bu dosyayı indirip vs'de açtıktan sonra terminale ilk önce "npm install react-router-dom axios bootstrap react-icons" sonra da "npm start" yazın. Proje açıldıktan sonra yine de hata verecek bunun sebebi bazı fonksiyonların php dosyasında olması. Php dosyaları da klosörde var.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
