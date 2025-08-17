@@ -12,10 +12,16 @@ function DoctorMySessions(){
         start_time: "",
         end_time: ""
     });
+    const [usename, setUseName] = useState("");
 
     useEffect(() => {
         fetchSchedules();
         fetchDoctors();
+
+        const storedName = localStorage.getItem("userNameDoctor");
+        if (storedName) {
+            setUseName(storedName);
+        }
     }, []);
 
     const fetchSchedules = () => {
@@ -102,14 +108,14 @@ function DoctorMySessions(){
                         </thead>
                         <tbody>
                             {schedules.map(sch => (
-                                sch.doctor_name === "Cengiz" && (
+                                usename === sch.doctor_name && (
                                     <tr key={sch.id}>
                                         <td>{sch.doctor_name}</td>
                                         <td>{sch.date}</td>
                                         <td>{sch.start_time}</td>
                                         <td>{sch.end_time}</td>
                                         <td>{sch.status}</td>
-                                        <td>
+                                        <td className="ds_event_buttons_td">
                                             <button onClick={() => handleRemoveSchedule(sch.id)} className="ds_event_buttons">Remove</button>
                                         </td>
                                     </tr>

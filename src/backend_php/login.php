@@ -33,7 +33,7 @@ if (!$email || !$password) {
     exit;
 }
 
-$stmt = $conn->prepare("SELECT role, password FROM users WHERE email = ?");
+$stmt = $conn->prepare("SELECT name, password FROM users WHERE email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
 $result = $stmt->get_result();
@@ -41,7 +41,7 @@ $result = $stmt->get_result();
 if ($row = $result->fetch_assoc()) {
     // Şifre karşılaştırması (şimdilik düz metin)
     if ($password === $row['password']) {
-        echo json_encode(["role" => $row['role']]);
+        echo json_encode(["name" => $row['name']]);
     } else {
         http_response_code(401);
         echo json_encode(["error" => "Invalid password"]);

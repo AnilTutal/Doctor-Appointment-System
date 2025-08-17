@@ -4,9 +4,16 @@ import React, {useState, useEffect} from "react";
 
 function PatientMyBookings() {
     const [bookings, setBookings] = useState([]);
+    const [usename, setUseName] = useState("");
+    
 
     useEffect(() => {
         fetchBookings();
+
+        const storedName = localStorage.getItem("userNamePatient");
+        if (storedName) {
+            setUseName(storedName);
+        }
     }, []);
 
     const fetchBookings = () => {
@@ -31,7 +38,7 @@ function PatientMyBookings() {
                         </thead>    
                         <tbody>
                             {bookings.map((b) => (
-                                b.patient_name === "Anıl" && (
+                                usename === b.patient_name && (
                                     <tr key={b.id}>
                                         <td>{b.patient_name}</td>
                                         <td>{b.doctor_name}</td>

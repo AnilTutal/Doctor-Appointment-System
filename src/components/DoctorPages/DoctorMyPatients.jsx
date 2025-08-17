@@ -5,11 +5,16 @@ import "../../styles/Doctorcss/DoctorsMyPatients.css";
 function DoctorMyPatients() {
     const [patients, setPatients] = useState([]);
     const [bookings, setBookings] = useState([]);
-    
+    const [usename, setUseName] = useState("");
     
     useEffect(() => {
         fetchPatients();
         fetchBookings();
+
+        const storedName = localStorage.getItem("userNameDoctor");
+        if (storedName) {
+            setUseName(storedName);
+        }
     }, []);
 
     const fetchBookings = () => {
@@ -25,8 +30,6 @@ function DoctorMyPatients() {
         .then((data) => setPatients(data))
         .catch((err) => console.error("Error fetching patients:", err));
     };
-
-
 
     return(
         <DoctorOrtakSayfa>
@@ -44,13 +47,13 @@ function DoctorMyPatients() {
                     </thead>
                     <tbody>
                         {bookings.map(dpat => (
-                            dpat.doctor_name === "Cengiz" && (
+                            usename === dpat.doctor_name && (
                                 <tr key={dpat.id}>
                                     <td>{dpat.patient_name}</td>
                                     <td>{dpat.patient_email}</td>
                                     <td>{dpat.doctor_name}</td>
                                     <td>{dpat.status}</td>
-                                    <td> 
+                                    <td className="dp_event_buttons_td"> 
                                         <button onClick={() => handleRemoveSchedule(dpat.id)} className="dp_event_buttons">Remove</button>
                                     </td>
                                 </tr>

@@ -9,7 +9,7 @@
 
 .register_div {
     display: flex;
-    height: 600px;
+    height: 650px;
     text-align: center;
     justify-content: center;
     flex-direction: column;
@@ -20,6 +20,7 @@
 
 .register_h {
     font-weight: bold;
+    padding-top: 10px;
 }
 
 .register_p {
@@ -31,6 +32,12 @@
     margin: 10px 20px 5px ;
     font-weight: bold;
     padding: 0px;
+}
+
+.register_input_napa {
+    display: flex;
+    flex-direction: row;
+    gap: 157px;
 }
 
 .register_ns {
@@ -73,4 +80,15 @@
     text-decoration: none;
     color: black;
     font-weight: bold;
+}
+
+.register_downdiv {
+    display: flex;
+    flex-direction: row;
+    gap: 104px;
+}
+
+.register_downdiv2 {
+    display: flex;
+    justify-content: space-between;
 }

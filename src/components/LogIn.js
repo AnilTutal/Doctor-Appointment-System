@@ -24,26 +24,49 @@ function LogIn() {
       body: JSON.stringify({ email, password }),
     });
 
-    console.log("Response status:", response.status);
-
     const data = await response.json();
-
-    console.log("Response data:", data);
 
     if (!response.ok) {
       setError(data.error || "Login failed");
       return;
     }
 
-    if (data.role === "admin") {
+    if (data.name === "Admin") {
+      localStorage.setItem("userEmailAdmin", email);
+      localStorage.setItem("userNameAdmin", data.name);
       navigate("/admin-dashboard");
-    } else if (data.role === "doctor") {
+    } else if (data.name === "Doctor") {
+      localStorage.setItem("userEmailDoctor", email);
+      localStorage.setItem("userNameDoctor", data.name);
       navigate("/doctor_dashboard");
-    } else if (data.role === "patient") {
+    } else if (data.name === "Patient") {
+      localStorage.setItem("userEmailPatient", email);
+      localStorage.setItem("userNamePatient", data.name);
       navigate("/patient_dashboard");
+    } else if (data.name === "Anıl") {
+      localStorage.setItem("userEmailPatient", email);
+      localStorage.setItem("userNamePatient", data.name);
+      navigate("/patient_dashboard");
+    } else if (data.name === "Ece") {
+      localStorage.setItem("userEmailPatient", email);
+      localStorage.setItem("userNamePatient", data.name);
+      navigate("/patient_dashboard");
+    } else if (data.name === "Timur") {
+      localStorage.setItem("userEmailPatient", email);
+      localStorage.setItem("userNamePatient", data.name);
+      navigate("/patient_dashboard");
+    } else if (data.name === "Cengiz") {
+      localStorage.setItem("userEmailDoctor", email);
+      localStorage.setItem("userNameDoctor", data.name);
+      navigate("/doctor_dashboard");
+    } else if (data.name === "Songül") {
+      localStorage.setItem("userEmailDoctor", email);
+      localStorage.setItem("userNameDoctor", data.name);
+      navigate("/doctor_dashboard");
     } else {
-      setError("Unknown role");
+      setError("Unknown name");
     }
+
   } catch (err) {
     console.error("Fetch error:", err);
     setError("Network error");

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 28 Tem 2025, 14:55:00
+-- Üretim Zamanı: 16 Ağu 2025, 17:16:30
 -- Sunucu sürümü: 10.4.32-MariaDB
 -- PHP Sürümü: 8.2.12
 
@@ -64,7 +64,7 @@ CREATE TABLE `doctors` (
 --
 
 INSERT INTO `doctors` (`id`, `name`, `email`, `specialties`) VALUES
-(1, 'Cengiz', 'cengiz@example.com', 'Cardiology'),
+(1, 'Cengiz', 'cengiz@edoc.com', 'Cardiology'),
 (2, 'Songül', 'songul@edoc.com', 'Üroloji');
 
 -- --------------------------------------------------------
@@ -125,6 +125,9 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
+  `number` varchar(20) DEFAULT NULL,
+  `adress` varchar(255) DEFAULT NULL,
+  `date_of_birth` date DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `role` enum('admin','doctor','patient') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -133,14 +136,15 @@ CREATE TABLE `users` (
 -- Tablo döküm verisi `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `role`) VALUES
-(1, 'Admin', 'admin@edoc.com', 'admin123', 'admin'),
-(2, 'Doctor', 'doctor@edoc.com', 'doctor123', 'doctor'),
-(3, 'Patient', 'patient@edoc.com', 'patient123', 'patient'),
-(27, 'Anıl', 'anil@edoc.com', '', 'patient'),
-(28, 'Ece', 'ece@edoc.com', '', 'patient'),
-(29, 'Timur', 'timur@edoc.com', '', 'patient'),
-(30, 'aa', 'a@edocc.com', '', 'patient');
+INSERT INTO `users` (`id`, `name`, `email`, `number`, `adress`, `date_of_birth`, `password`, `role`) VALUES
+(1, 'Admin', 'admin@edoc.com', 'Xxx', 'Xxx', '2025-08-12', 'admin123', 'admin'),
+(2, 'Doctor', 'doctor@edoc.com', 'Xxx', 'Xxx', '2025-08-11', 'doctor123', 'doctor'),
+(3, 'Patient', 'patient@edoc.com', 'Xxx', 'Xxx', '2025-08-10', 'patient123', 'patient'),
+(27, 'Anıl', 'anil@edoc.com', 'Xxx', 'Xxx', '2025-08-06', 'anil123', 'patient'),
+(28, 'Ece', 'ece@edoc.com', 'Xxx', 'Xxx', '2025-08-05', 'ece123', 'patient'),
+(29, 'Timur', 'timur@edoc.com', 'Xxx', 'Xxx', '2025-08-03', 'timur123', 'patient'),
+(31, 'Cengiz', 'cengiz@edoc.com', 'Xxx', 'Xxx', '2025-08-02', 'cengiz123', 'doctor'),
+(32, 'Songül', 'songul@edoc.com', 'Xxx', 'Xxx', '2025-08-01', 'songul123', 'doctor');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -214,7 +218,7 @@ ALTER TABLE `schedules`
 -- Tablo için AUTO_INCREMENT değeri `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- Dökümü yapılmış tablolar için kısıtlamalar

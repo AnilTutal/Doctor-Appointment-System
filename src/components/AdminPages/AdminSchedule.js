@@ -107,7 +107,7 @@ function AdminSchedule() {
                   <td>{sch.start_time}</td>
                   <td>{sch.end_time}</td>
                   <td>{sch.status}</td>
-                  <td>
+                  <td className="as_event_buttons_td">
                     <button onClick={() => handleRemoveSchedule(sch.id)} className="as_event_buttons">Remove</button>
                   </td>
                 </tr>

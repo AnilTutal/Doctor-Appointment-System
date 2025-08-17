@@ -5,9 +5,15 @@ import "../../styles/Doctorcss/DoctorsMyAppointments.css";
 function DoctorsMyAppointments({children}) {
 
   const [bookings, setBookings] = useState([]);
+  const [usename, setUseName] = useState("");
   
   useEffect(() => {
     fetchBookings();
+
+    const storedName = localStorage.getItem("userNameDoctor");
+        if (storedName) {
+            setUseName(storedName);
+        }
   }, []);
 
   const fetchBookings = () => {
@@ -20,7 +26,7 @@ function DoctorsMyAppointments({children}) {
   return (
       <DoctorOrtakSayfa>
         <div className="dpp_table_div">
-          <h3 style={{paddingBottom: "10px"}}>My Appointments ({bookings.length})</h3>
+          <h3 style={{paddingBottom: "10px"}}>All Appointments ({bookings.length})</h3>
           <table className="dpp_doctor_table">
             <thead className="dpp_table_headers">
               <tr>
@@ -33,7 +39,7 @@ function DoctorsMyAppointments({children}) {
             </thead>
             <tbody>
               {bookings.map((b) => (
-                b.doctor_name === "Cengiz" && (
+                usename === b.doctor_name &&(
                   <tr key={b.id}>
                     <td>{b.patient_name}</td>
                     <td>{b.doctor_name}</td>

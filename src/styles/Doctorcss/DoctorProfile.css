@@ -1,0 +1,32 @@
+.docp_table_div {
+    padding: 20px;
+}
+
+.docp_doctor_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.docp_table_headers {
+    box-shadow: 0 5px 1px cornflowerblue;
+}
+
+.docp_doctor_table th, .docp_doctor_table td {
+    box-shadow: 0 5px 2px rgba(0,0,0,0.2);
+    border: 1px ;
+    padding: 8px;
+    text-align: center;
+}
+
+.docp_doctor_table th {
+    background-color: white;
+    color: black;
+}
+
+.docp_event_buttons_td {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+}
+

@@ -16,7 +16,10 @@
 .dashboard_left_up {
     border-bottom: 2px solid #ddd;
     padding-bottom: 20px;
-    text-align: center;
+    text-align: center; 
+    display: flex;           
+    justify-content: center;
+    flex-direction: column;
 }
 
 .dashboard_left_down {
@@ -27,9 +30,11 @@
 }
 
 .dashboard_admin_button {
-    padding: 50px;
+    padding: 0px;
     margin: 2px;
-    
+    width: 200px; 
+    height: 200px;           
+    overflow: hidden;
 }
 
 .dashboard_left_h {
@@ -141,6 +146,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.date_link {
+    color: cornflowerblue;
 }
 
 .dashboard_right_content {

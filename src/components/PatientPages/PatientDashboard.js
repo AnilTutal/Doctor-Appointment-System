@@ -12,6 +12,8 @@ function PatientDashboard({children}) {
     const [schedules, setSchedules] = useState([]);
     const [patients, setPatients] = useState([]);
     const [doctors, setDoctors] = useState([]);
+    const [usename, setUseName] = useState("");
+    
 
     const status = [
         { id : 1, name: "All Doctors", icon: <MdOutlineMedicalServices size={25} />, number: doctors.length},
@@ -25,6 +27,11 @@ function PatientDashboard({children}) {
         fetchSchedules();
         fetchDoctors();
         fetchPatients();
+
+        const storedName = localStorage.getItem("userNamePatient");
+        if (storedName) {
+            setUseName(storedName);
+        }
     }, []);
         
     const fetchBookings = () => {
@@ -100,7 +107,7 @@ function PatientDashboard({children}) {
                             </thead>    
                             <tbody>
                                 {bookings.map((b) => (
-                                    b.patient_name === "Anıl" && (
+                                    usename === b.patient_name && (
                                         <tr key={b.id}>
                                             <td>{b.patient_name}</td>
                                             <td>{b.doctor_name}</td>

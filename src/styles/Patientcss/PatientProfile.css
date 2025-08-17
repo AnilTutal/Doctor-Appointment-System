@@ -1,0 +1,32 @@
+.patpr_table_div {
+    padding: 20px;
+}
+
+.patpr_doctor_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.patpr_table_headers {
+    box-shadow: 0 5px 1px cornflowerblue;
+}
+
+.patpr_doctor_table th, .patpr_doctor_table td {
+    box-shadow: 0 5px 2px rgba(0,0,0,0.2);
+    border: 1px ;
+    padding: 8px;
+    text-align: center;
+}
+
+.patpr_doctor_table th {
+    background-color: white;
+    color: black;
+}
+
+.patpr_event_buttons_td {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+}
+

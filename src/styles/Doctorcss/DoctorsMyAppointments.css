@@ -24,6 +24,13 @@
     
 }
 
+.dpp_event_buttons_td {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    gap: 50px;
+}
+
 .dpp_event_buttons {
     background-color: cornflowerblue;
     border-radius: 5px;

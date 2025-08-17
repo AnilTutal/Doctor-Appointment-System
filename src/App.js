@@ -9,23 +9,21 @@ import AdminDoctors from './components/AdminPages/AdminDoctors.js';
 import AdminPatients from './components/AdminPages/AdminPatients.js';
 import AdminAppointment from './components/AdminPages/AdminAppointment.js';
 import AdminSchedule from './components/AdminPages/AdminSchedule.js';
+import AdminProfiles from './components/AdminPages/AdminProfiles.jsx';
 
 import PatientDashboard from './components/PatientPages/PatientDashboard.js';
 import PatientAllDoctors from './components/PatientPages/PatientAllDoctors.js';
 import PatientSchedule from './components/PatientPages/PatientSchedule.js';
 import PatientMyBookings from './components/PatientPages/PatientMyBookings.js';
+import PatientProfile from './components/PatientPages/PatientProfile.jsx';
 
 import DoctorDashboard from './components/DoctorPages/DoctorDashboard.jsx';
 import DoctorsMyAppointments from './components/DoctorPages/DoctorsMyAppointments.jsx';
 import DoctorMySessions from './components/DoctorPages/DoctorMySessions.jsx';
 import DoctorMyPatients from './components/DoctorPages/DoctorMyPatients.jsx';
-
-
-
-
+import DoctorProfile from './components/DoctorPages/DoctorProfile.jsx';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React from 'react';
 
 function App() {
   return (
@@ -47,7 +45,9 @@ function App() {
         <Route path='/patient_all_doctors' element={<PatientAllDoctors/>} />
         <Route path='/patient_schedule' element={<PatientSchedule/>} />
         <Route path='/patient_my_bookings' element={<PatientMyBookings/>} />
-
+        <Route path='/doctor_profile' element={<DoctorProfile/>}/>
+        <Route path='/admin_profiles' element={<AdminProfiles/>} />
+        <Route path='/patient_profile' element={<PatientProfile/>}/>
       </Routes>
     </Router>
   );
