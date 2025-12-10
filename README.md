@@ -1,4 +1,4 @@
-Bu dosyayı indirip vs'de açtıktan sonra terminale ilk önce "npm install react-router-dom axios bootstrap react-icons" sonra da "npm start" yazın. Proje açıldıktan sonra yine de hata verecek bunun sebebi bazı fonksiyonların php dosyasında olması. Php dosyaları klosörde var. Birde ben uygulamanın database kısmını XAMPP'de mySQL kullanarak yaptım. O yüzden hiçbir tablo gözükmüyor.
+
 
 <img width="1918" height="931" alt="3" src="https://github.com/user-attachments/assets/f16be7fe-36c8-4a4b-896b-09c517dfb016" />
 
